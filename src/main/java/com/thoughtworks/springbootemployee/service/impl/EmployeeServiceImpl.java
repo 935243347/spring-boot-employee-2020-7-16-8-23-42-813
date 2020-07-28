@@ -11,21 +11,21 @@ import java.util.List;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
-    EmployeeDao EmployeeDao;
+    EmployeeDao employeeDao;
 
     public void addEmployee(Employee employee){
-        EmployeeDao.addEmployee(employee);
+        employeeDao.addEmployee(employee);
     }
     public void deleteEmployee(int id){
-        EmployeeDao.deleteEmployee(id);
+        employeeDao.deleteEmployee(id);
     }
     public Employee updateEmployee(Employee employee){
-        return EmployeeDao.updateEmployee(employee);
+        return employeeDao.updateEmployee(employee);
     }
     public List<Employee> getAllEmployees(){
-        return EmployeeDao.getAllEmployees();
+        return employeeDao.getAllEmployees();
     }
     public Employee getEmployee(int id){
-        return EmployeeDao.getEmployee(id);
+        return employeeDao.getEmployee(id);
     }
 }

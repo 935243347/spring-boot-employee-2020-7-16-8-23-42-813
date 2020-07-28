@@ -22,7 +22,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
         return null;
     }
     public List<Employee> getAllEmployees(){
-        return null;
+        return employees;
     }
     public Employee getEmployee(int id){
         return employees.stream().filter(employee -> employee.getId() == id).findFirst().orElse(null);

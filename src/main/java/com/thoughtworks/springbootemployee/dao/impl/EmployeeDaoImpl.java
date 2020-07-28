@@ -19,7 +19,10 @@ public class EmployeeDaoImpl implements EmployeeDao {
         employees.remove(employeeReadyToDelete);
     }
     public Employee updateEmployee(Employee employee){
-        return null;
+        Employee employeeReadyToUnpdate = employees.stream().filter(e -> e.getId()==employee.getId()).findFirst().orElse(null);
+        employees.remove(employeeReadyToUnpdate);
+        employees.add(employee);
+        return employeeReadyToUnpdate;
     }
     public List<Employee> getAllEmployees(){
         return employees;
